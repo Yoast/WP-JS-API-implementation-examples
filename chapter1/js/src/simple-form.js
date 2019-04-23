@@ -1,4 +1,4 @@
-$( function (  ) {
+$( function () {
 	var form = "<div>" +
 	     "<section>" +
 	        "<label for='title'>Title</label><input type='text' id='title' name='title' />" +
