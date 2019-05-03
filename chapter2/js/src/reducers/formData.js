@@ -24,13 +24,13 @@ export default function formDataReducer( state = INITIAL_STATE, action ) {
 		case SET_FORM_CONTENT:
 			return {
 				...state,
-				slug: action.content,
+				content: action.content,
 			};
 
 		case SET_FORM_EXCERPT:
 			return {
 				...state,
-				slug: action.excerpt,
+				excerpt: action.excerpt,
 			};
 	}
 

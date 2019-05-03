@@ -37,4 +37,4 @@ class SimpleForm extends React.Component {
 	}
 }
 
-ReactDOM.render( <SimpleForm/>, document.getElementById( "root" ) );
+export default SimpleForm;

@@ -1,4 +1,3 @@
-
 export const SET_FORM_TITLE     = 'WPSJS_SET_FORM_TITLE';
 export const SET_FORM_SLUG      = 'WPSJS_SET_FORM_SLUG';
 export const SET_FORM_CONTENT   = 'WPSJS_SET_FORM_CONTENT';

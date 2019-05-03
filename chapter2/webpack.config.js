@@ -3,7 +3,8 @@ const path = require( "path" );
 module.exports = {
 	mode: process.env.NODE_ENV,
 	entry: {
-		simpleForm: "./js/src/simple-form-react.js",
+		reactApp: "./js/src/app.js",
+		jqueryApp: "./js/src/simple-form.js",
 	},
 	output: {
 		path: path.resolve( "js", "dist" ),
