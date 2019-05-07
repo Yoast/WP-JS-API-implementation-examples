@@ -1,4 +1,4 @@
-import {SET_FORM_TITLE, SET_FORM_SLUG, SET_FORM_CONTENT, SET_FORM_EXCERPT} from "../actions/form";
+import { SET_FORM_TITLE, SET_FORM_SLUG, SET_FORM_CONTENT, SET_FORM_EXCERPT } from "../actions/form";
 
 const INITIAL_STATE = {
 	title:   '',
@@ -7,6 +7,14 @@ const INITIAL_STATE = {
 	excerpt: '',
 };
 
+/**
+ * Reducer for the form data.
+ *
+ * @param {Object} state  The current state.
+ * @param {Object} action The current action.
+ *
+ * @returns {Object} The new state.
+ */
 export default function formDataReducer( state = INITIAL_STATE, action ) {
 	switch ( action.type ) {
 		case SET_FORM_TITLE:
