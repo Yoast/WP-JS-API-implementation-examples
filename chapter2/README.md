@@ -1,8 +1,8 @@
-# Chapter 1 - The basic form
+# Chapter 2 - Adding Redux
 
 ## Prerequisites
 
-If you haven't already, make sure you check out [Chapter 0](../chapter0/README.md) to setup your developer environment with the correct tools and dependencies.
+If you haven't already, make sure you check out [Chapter 1](../chapter1/README.md) to ensure you have implemented the form.
 
 ## Getting started
 
