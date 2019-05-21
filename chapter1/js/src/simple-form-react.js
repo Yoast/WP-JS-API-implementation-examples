@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 /**
  * Class that creates a simple input form.
@@ -37,4 +36,4 @@ class SimpleForm extends React.Component {
 	}
 }
 
-ReactDOM.render( <SimpleForm/>, document.getElementById( "root" ) );
+export default SimpleForm;
