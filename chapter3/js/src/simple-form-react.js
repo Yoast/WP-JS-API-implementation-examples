@@ -2,8 +2,6 @@ import React from 'react';
 import { withSelect, withDispatch } from "@wordpress/data";
 import { compose } from "@wordpress/compose";
 
-
-
 /**
  * Class that creates a simple input form.
  */
@@ -107,11 +105,13 @@ class BaseSimpleForm extends React.Component {
  * @returns {Object} The mapped props.
  */
 const mapStateToProps = ( select ) => {
+	const store = select( "yoast/api-example" );
+
 	return {
-		title: select( "yoast/api-example" ).getTitle(),
-		slug: select( "yoast/api-example" ).getSlug(),
-		content: select( "yoast/api-example" ).getContent(),
-		excerpt: select( "yoast/api-example" ).getExcerpt(),
+		title:   store.getTitle(),
+		slug:    store.getSlug(),
+		content: store.getContent(),
+		excerpt: store.getExcerpt(),
 	};
 }
 
@@ -123,11 +123,13 @@ const mapStateToProps = ( select ) => {
  * @returns {Object} The dispatch functions mapped to props.
  */
 const mapDispatchToProps = ( dispatch ) => {
+	const store = dispatch( "yoast/api-example" );
+
 	return {
-		setFormTitle:   dispatch( "yoast/api-example" ).setFormTitle,
-		setFormSlug:    dispatch( "yoast/api-example" ).setFormSlug,
-		setFormContent: dispatch( "yoast/api-example" ).setFormContent,
-		setFormExcerpt: dispatch( "yoast/api-example" ).setFormExcerpt,
+		setFormTitle:   store.setFormTitle,
+		setFormSlug:    store.setFormSlug,
+		setFormContent: store.setFormContent,
+		setFormExcerpt: store.setFormExcerpt,
 	}
 }
 

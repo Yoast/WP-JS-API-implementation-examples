@@ -3,39 +3,37 @@ import {dispatch, registerStore, select, subscribe} from "@wordpress/data";
 import * as selectors from "./selectors";
 import * as actions from "./actions";
 
-registerStore( "yoast/api-example", {
+const NAMESPACE = "yoast/api-example";
+
+registerStore( NAMESPACE, {
 	reducer: rootReducer,
 	selectors,
 	actions,
 } );
 
-window.wp = {};
-window.wp.select = select;
-
 $( function () {
 	// Attach events
 	$( '#title' ).on( 'keyup', function() {
-		console.log( "test" );
-		dispatch( "yoast/api-example" ).setFormTitle( this.value );
+		dispatch( NAMESPACE ).setFormTitle( this.value );
 	} );
 
-//	$( '#slug' ).on( 'keyup', function() {
-//		dispatch( setFormSlug( this.value ) );
-//	} );
-//
-//	$( '#content' ).on( 'keyup', function() {
-//		dispatch( setFormContent( this.value ) );
-//	} );
-//
-//	$( '#excerpt' ).on( 'keyup', function() {
-//		dispatch( setFormExcerpt( this.value ) );
-//	} );
+	$( '#slug' ).on( 'keyup', function() {
+		dispatch( NAMESPACE ).setFormSlug( this.value );
+	} );
+
+	$( '#content' ).on( 'keyup', function() {
+		dispatch( NAMESPACE ).setFormContent( this.value );
+	} );
+
+	$( '#excerpt' ).on( 'keyup', function() {
+		dispatch( NAMESPACE ).setFormExcerpt( this.value );
+	} );
 
 	// Subscribe to changes
 	subscribe( function() {
-		$( '#title' ).val( select( "yoast/api-example" ).getTitle() );
-//		$( '#slug' ).val( state.form.slug );
-//		$( '#content' ).val( state.form.content );
-//		$( '#excerpt' ).val( state.form.excerpt );
+		$( '#title' ).val( select( NAMESPACE ).getTitle() );
+		$( '#slug' ).val( select( NAMESPACE ).getSlug() );
+		$( '#content' ).val( select( NAMESPACE ).getContent() );
+		$( '#excerpt' ).val( select( NAMESPACE ).getExcerpt() );
 	} );
 } );
