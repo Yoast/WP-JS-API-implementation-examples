@@ -1,0 +1,30 @@
+{
+  "name": "wp-js-api-implementation",
+  "version": "1.0.0",
+  "description": "Example project for the Yoast tutorial series for implementing the new WordPress JavaScript API into your own projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yoast/WP-JS-API-implementation-examples"
+  },
+  "scripts": {
+    "build-dev": "NODE_ENV=development webpack --config=webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "GPL-2.0+",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@wordpress/compose": "^3.3.0",
+    "@wordpress/data": "^4.5.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1"
+  }
+}
