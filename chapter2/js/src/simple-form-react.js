@@ -85,12 +85,12 @@ class BaseSimpleForm extends React.Component {
 
 				<section>
 					<label htmlFor="content">Content</label>
-					<textarea name="content" id="content" cols="60" rows="10" onChange={ this.onContentChange }>{ this.props.content }</textarea>
+					<textarea name="content" id="content" cols="60" rows="10" onChange={ this.onContentChange } value={ this.props.content }></textarea>
 				</section>
 
 				<section>
 					<label htmlFor="excerpt">Excerpt</label>
-					<textarea name="excerpt" id="excerpt" cols="60" rows="10" onChange={ this.onExcerptChange }>{ this.props.excerpt }</textarea>
+					<textarea name="excerpt" id="excerpt" cols="60" rows="10" onChange={ this.onExcerptChange } value={ this.props.excerpt }></textarea>
 				</section>
 			</div>
 		);
