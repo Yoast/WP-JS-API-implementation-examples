@@ -7,7 +7,6 @@ import * as actions from "./actions";
 import SimpleForm from "./simple-form-react";
 import {registerStore} from "@wordpress/data";
 
-
 registerStore( "yoast/api-example", {
 	reducer: rootReducer,
 	selectors,
@@ -16,9 +15,7 @@ registerStore( "yoast/api-example", {
 
 class App extends React.Component {
 	render() {
-		return (
-			<SimpleForm />
-		)
+		return ( <SimpleForm /> );
 	}
 }
 
