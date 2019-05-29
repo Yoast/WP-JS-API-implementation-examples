@@ -31,9 +31,11 @@ $( function () {
 
 	// Subscribe to changes
 	subscribe( function() {
-		$( '#title' ).val( select( NAMESPACE ).getTitle() );
-		$( '#slug' ).val( select( NAMESPACE ).getSlug() );
-		$( '#content' ).val( select( NAMESPACE ).getContent() );
-		$( '#excerpt' ).val( select( NAMESPACE ).getExcerpt() );
+		const store = select( NAMESPACE );
+
+		$( '#title' ).val( store.getTitle() );
+		$( '#slug' ).val( store.getSlug() );
+		$( '#content' ).val( store.getContent() );
+		$( '#excerpt' ).val( store.getExcerpt() );
 	} );
 } );
