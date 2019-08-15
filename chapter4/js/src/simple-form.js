@@ -1,41 +1,41 @@
-import rootReducer from "./reducers";
-import {dispatch, registerStore, select, subscribe} from "@wordpress/data";
-import * as selectors from "./selectors";
-import * as actions from "./actions";
+import {combineReducers, dispatch, registerStore, select, subscribe} from "@wordpress/data";
+import editorReducer from "./reducers/core-editor";
+import * as editorSelectors from "./selectors/core-editor";
+import * as editorActions from "./actions/core-editor";
 
-const NAMESPACE = "yoast/api-example";
+const NAMESPACE = "core/editor";
 
 registerStore( NAMESPACE, {
-	reducer: rootReducer,
-	selectors,
-	actions,
+	reducer: combineReducers( { editor: editorReducer } ),
+	selectors: editorSelectors,
+	actions: editorActions,
 } );
 
 $( function () {
 	// Attach events
 	$( '#title' ).on( 'keyup', function() {
-		dispatch( NAMESPACE ).setFormTitle( this.value );
+		dispatch( NAMESPACE ).setPostTitle( this.value );
 	} );
 
 	$( '#slug' ).on( 'keyup', function() {
-		dispatch( NAMESPACE ).setFormSlug( this.value );
+		dispatch( NAMESPACE ).setPostSlug( this.value );
 	} );
 
 	$( '#content' ).on( 'keyup', function() {
-		dispatch( NAMESPACE ).setFormContent( this.value );
+		dispatch( NAMESPACE ).setPostContent( this.value );
 	} );
 
 	$( '#excerpt' ).on( 'keyup', function() {
-		dispatch( NAMESPACE ).setFormExcerpt( this.value );
+		dispatch( NAMESPACE ).setPostExcerpt( this.value );
 	} );
 
 	// Subscribe to changes
 	subscribe( function() {
 		const store = select( NAMESPACE );
 
-		$( '#title' ).val( store.getTitle() );
-		$( '#slug' ).val( store.getSlug() );
-		$( '#content' ).val( store.getContent() );
-		$( '#excerpt' ).val( store.getExcerpt() );
+		$( '#title' ).val( store.getEditedPostAttribute( 'title' ) );
+		$( '#slug' ).val( store.getEditedPostAttribute( 'slug' ) );
+		$( '#content' ).val( store.getEditedPostContent() );
+		$( '#excerpt' ).val( store.getEditedPostAttribute( 'excerpt' ) );
 	} );
 } );

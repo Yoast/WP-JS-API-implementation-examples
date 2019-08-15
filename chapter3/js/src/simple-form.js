@@ -1,5 +1,5 @@
-import rootReducer from "./reducers";
 import {dispatch, registerStore, select, subscribe} from "@wordpress/data";
+import rootReducer from "./reducers";
 import * as selectors from "./selectors";
 import * as actions from "./actions";
 

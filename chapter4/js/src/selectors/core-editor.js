@@ -33,11 +33,25 @@ export function getEditedPostAttribute( state, attribute ) {
  * @returns {string} The edited post content.
  */
 export function getEditedPostContent( state ) {
-	const client = state.editor.present.blocks.byClientId || '';
+	const blocks = getBlocksForSerialization( state );
 
-	if ( client === '' ) {
-		return client;
+	if ( blocks.length === 0 ) {
+		return '';
 	}
 
-	return client['some-random-block-id'].attributes.content;
+	return blocks.byClientId['some-random-block-id'].attributes.content;
+}
+
+/**
+ * Returns a set of blocks which are to be used in consideration of the post's
+ * generated save content.
+ *
+ * @param {Object} state Editor state.
+ *
+ * @return {WPBlock[]} Filtered set of blocks for save.
+ */
+function getBlocksForSerialization( state ) {
+
+	// This is an overly simplified version of the original method.
+	return state.editor.present.blocks;
 }
