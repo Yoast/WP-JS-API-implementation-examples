@@ -5,8 +5,8 @@ import editorReducer from "./reducers/core-editor";
 import * as editorActions from "./actions/core-editor";
 import * as editorSelectors from "./selectors/core-editor";
 
-import SimpleForm from "./simple-form-react";
 import {combineReducers, registerStore} from "@wordpress/data";
+import Editor from "./components/Editor";
 
 registerStore( "core/editor", {
 	reducer: combineReducers( { editor: editorReducer } ),
@@ -16,7 +16,7 @@ registerStore( "core/editor", {
 
 class App extends React.Component {
 	render() {
-		return ( <SimpleForm /> );
+		return ( <Editor /> );
 	}
 }
 

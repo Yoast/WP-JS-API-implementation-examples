@@ -35,7 +35,7 @@ export function getEditedPostAttribute( state, attribute ) {
 export function getEditedPostContent( state ) {
 	const blocks = getBlocksForSerialization( state );
 
-	if ( blocks.length === 0 ) {
+	if ( Object.entries( blocks ).length === 0 ) {
 		return '';
 	}
 
