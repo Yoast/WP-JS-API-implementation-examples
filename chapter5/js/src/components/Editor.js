@@ -2,9 +2,22 @@ import React from "react";
 import SimpleForm from "../simple-form-react";
 import { SlotFillProvider } from "@wordpress/components";
 import Sidebar from "./Sidebar";
-import ExampleFill from "./ExampleFill";
 
+import TitleFill from "./fills/TitleFill";
+import SlugFill from "./fills/SlugFill";
+import ContentFill from "./fills/ContentFill";
+import ExcerptFill from "./fills/ExcerptFill";
+
+/**
+ * The Editor component.
+ */
 class Editor extends React.Component {
+
+	/**
+	 * Renders the component.
+	 *
+	 * @returns {Editor} The Editor component.
+	 */
 	render() {
 		return (
 			<div className="flex-grid">
@@ -14,10 +27,10 @@ class Editor extends React.Component {
 					</section>
 					<Sidebar />
 
-					{ExampleFill()}
-					{ExampleFill()}
-					{ExampleFill()}
-					{ExampleFill()}
+					{<TitleFill />}
+					{<SlugFill />}
+					{<ContentFill />}
+					{<ExcerptFill />}
 				</SlotFillProvider>
 			</div>
 		);
