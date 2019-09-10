@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleForm from "../simple-form-react";
+import SimpleForm from "./simple-form-react";
 import { SlotFillProvider } from "@wordpress/components";
 import Sidebar from "./Sidebar";
 
