@@ -22,7 +22,7 @@ class ContentFill extends React.Component {
 			return "You haven't added any content. Please add some.";
 		}
 
-		return "That's some good content!";
+		return `Total words: ${wordCount}`;
 	}
 
 	/**

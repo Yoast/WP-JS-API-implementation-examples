@@ -27,10 +27,10 @@ class Editor extends React.Component {
 					</section>
 					<Sidebar />
 
-					{<TitleFill />}
-					{<SlugFill />}
-					{<ContentFill />}
-					{<ExcerptFill />}
+					<TitleFill />
+					<SlugFill />
+					<ContentFill />
+					<ExcerptFill />
 				</SlotFillProvider>
 			</div>
 		);
