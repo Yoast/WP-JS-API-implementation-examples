@@ -22,7 +22,7 @@ class SlugFill extends React.Component {
 		}
 
 		// Check if only valid characters exist in the slug.
-		if ( slug.match( /^[a-zA-Z0-9-_]*$/ ) === null ) {
+		if ( slug.match( /^[a-z0-9-_]*$/ ) === null ) {
 			return "You have some invalid characters in your slug. Please remove them."
 		}
 
