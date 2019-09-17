@@ -74,8 +74,8 @@ const mapStateToProps = ( select ) => {
 	const store = select( "core/editor" );
 
 	return {
+		slug:          store.getEditedPostAttribute( 'slug' ),
 		suggestedSlug: to_compatible_slug( store.getEditedPostAttribute( 'title' ) ),
-		slug:   store.getEditedPostAttribute( 'slug' ),
 	};
 }
 
