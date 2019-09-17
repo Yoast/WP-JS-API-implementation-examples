@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { compose } from "@wordpress/compose";
 import { withSelect } from "@wordpress/data";
 import { Fill } from "@wordpress/components";
