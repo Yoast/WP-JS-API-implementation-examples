@@ -1,5 +1,5 @@
-import React from "react";
-import { Slot, Panel, PanelBody } from "@wordpress/components";
+import React, {Fragment} from "react";
+import ContentFill from "./fills/ContentFill";
 
 /**
  * The Sidebar component.
@@ -7,19 +7,15 @@ import { Slot, Panel, PanelBody } from "@wordpress/components";
 class Sidebar extends React.Component {
 
 	/**
-	 * Renders the component.
+	 * Renders the sidebar.
 	 *
 	 * @returns {Sidebar} The Sidebar component.
 	 */
 	render() {
 		return (
-			<aside className="col sidebar">
-				<Panel header="Sidebar">
-					<PanelBody>
-						<Slot name="SidebarSlot" />
-					</PanelBody>
-				</Panel>
-			</aside>
+		  <Fragment>
+        <ContentFill />
+      </Fragment>
 		);
 	}
 }

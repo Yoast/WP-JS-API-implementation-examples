@@ -1,12 +1,6 @@
 import React from "react";
 import SimpleForm from "./simple-form-react";
-import { SlotFillProvider } from "@wordpress/components";
-import Sidebar from "./Sidebar";
-
-import TitleFill from "./fills/TitleFill";
-import SlugFill from "./fills/SlugFill";
-import ContentFill from "./fills/ContentFill";
-import ExcerptFill from "./fills/ExcerptFill";
+import PluginArea from "../utils/plugin-area";
 
 /**
  * The Editor component.
@@ -21,17 +15,12 @@ class Editor extends React.Component {
 	render() {
 		return (
 			<div className="flex-grid">
-				<SlotFillProvider>
-					<section className="col main">
-						<SimpleForm />
-					</section>
-					<Sidebar />
-
-					<TitleFill />
-					<SlugFill />
-					<ContentFill />
-					<ExcerptFill />
-				</SlotFillProvider>
+        <section className="col main">
+          <SimpleForm />
+        </section>
+        <aside className="col sidebar">
+          <PluginArea />
+        </aside>
 			</div>
 		);
 	}

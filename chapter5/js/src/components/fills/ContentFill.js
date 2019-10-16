@@ -32,7 +32,7 @@ class ContentFill extends React.Component {
 	 */
 	render() {
 		return (
-			<Fill name="SidebarSlot">
+			<Fill name="MyAwesomePluginSidebar">
 				<p>{ this.evaluateContent() }</p>
 			</Fill>
 		);
