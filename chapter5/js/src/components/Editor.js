@@ -1,6 +1,6 @@
 import React from "react";
 import SimpleForm from "./simple-form-react";
-import PluginArea from "../utils/plugin-area";
+import PluginArea from "./plugin-area";
 
 /**
  * The Editor component.

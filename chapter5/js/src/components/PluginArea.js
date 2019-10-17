@@ -1,5 +1,5 @@
 import React from "react";
-import {getPlugins} from "./api";
+import {getPlugins} from "../utils/api";
 import PluginContextProvider from "../components/PluginContextProvider";
 
 /**
