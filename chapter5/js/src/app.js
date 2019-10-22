@@ -8,7 +8,7 @@ import editorReducer from "./reducers/core-editor";
 import * as editorActions from "./actions/core-editor";
 import * as editorSelectors from "./selectors/core-editor";
 
-import {registerPlugin} from "./utils/api";
+import { registerPlugin } from "./utils/api";
 
 import Editor from "./components/Editor";
 import PluginSidebar from "./components/PluginSidebar";
