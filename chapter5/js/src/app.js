@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 
-import {combineReducers, registerStore} from "@wordpress/data";
-import {Slot} from "@wordpress/components";
+import { combineReducers, registerStore } from "@wordpress/data";
+import { Slot } from "@wordpress/components";
 
 import editorReducer from "./reducers/core-editor";
 import * as editorActions from "./actions/core-editor";
