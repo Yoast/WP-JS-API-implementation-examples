@@ -1,5 +1,5 @@
 import React from "react";
-import {SlotFillProvider} from "@wordpress/components";
+import { SlotFillProvider } from "@wordpress/components";
 
 /**
  * The PluginContextProvider component.
