@@ -1,0 +1,24 @@
+.flex-grid {
+    display: flex;
+}
+
+.col {
+    padding: 1em;
+}
+
+.sidebar {
+    flex: 1;
+    background: #efefef;
+}
+
+.main {
+    flex: 3;
+}
+
+section {
+    padding: 0.5em 0.25em;
+}
+
+input, textarea {
+    display: block;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * Class that creates a simple input form.
