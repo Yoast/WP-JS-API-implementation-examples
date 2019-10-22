@@ -36,7 +36,7 @@ class TitleFill extends React.Component {
 	 */
 	render() {
 		return (
-			<Fill name="SidebarSlot">
+			<Fill name="MyAwesomePluginSidebar">
 				<p>{ this.evaluateTitle() }</p>
 			</Fill>
 		);

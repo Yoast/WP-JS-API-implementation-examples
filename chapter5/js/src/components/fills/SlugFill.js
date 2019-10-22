@@ -56,7 +56,7 @@ class SlugFill extends React.Component {
 	 */
 	render() {
 		return (
-			<Fill name="SidebarSlot">
+			<Fill name="MyAwesomePluginSidebar">
 				<p>{ this.evaluateSlug() }</p>
 			</Fill>
 		);

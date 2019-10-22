@@ -31,7 +31,7 @@ class ExcerptFill extends React.Component {
 	 */
 	render() {
 		return (
-			<Fill name="SidebarSlot">
+			<Fill name="MyAwesomePluginSidebar">
 				<p>{ this.evaluateExcerpt() }</p>
 			</Fill>
 		);
