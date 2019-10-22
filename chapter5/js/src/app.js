@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 
 import {combineReducers, registerStore} from "@wordpress/data";
@@ -61,11 +61,11 @@ class App extends React.Component {
       </Fragment>
     );
 
-    registerPlugin( 'My-awesome-plugin', {
+    registerPlugin( "My-awesome-plugin", {
       render: MySidebar
     } );
 
-    registerPlugin( 'My-awesome-plugin-2', {
+    registerPlugin( "My-awesome-plugin-2", {
       render: MySidebar2
     } );
   }
