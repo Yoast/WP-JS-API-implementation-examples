@@ -1,5 +1,7 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import ContentFill from "./fills/ContentFill";
+import PluginSidebar from "../../../components/PluginSidebar";
+import { Slot } from "@wordpress/components";
 
 /**
  * The Sidebar component.
@@ -14,9 +16,13 @@ class Sidebar extends React.Component {
 	render() {
 		return (
 		  <Fragment>
+        <PluginSidebar name="my-awesome-plugin-sidebar" title="My Awesome Plugin">
+          <Slot name="MyAwesomePluginSidebar" />
+        </PluginSidebar>
+
         <ContentFill />
       </Fragment>
-		);
+    );
 	}
 }
 
