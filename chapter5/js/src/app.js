@@ -1,18 +1,16 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
 import { combineReducers, registerStore } from "@wordpress/data";
-import { Slot } from "@wordpress/components";
 
 import editorReducer from "./reducers/core-editor";
 import * as editorActions from "./actions/core-editor";
 import * as editorSelectors from "./selectors/core-editor";
 
-import { registerPlugin } from "./utils/api";
-
 import Editor from "./components/Editor";
-import PluginSidebar from "./components/PluginSidebar";
-import Sidebar from "./components/Sidebar";
+
+import MyAwesomePlugin from "./plugins/MyAwesomePlugin/MyAwesomePlugin";
+import MyNotSoAwesomePlugin from "./plugins/MyNotSoAwesomePlugin/MyNotSoAwesomePlugin";
 
 registerStore( "core/editor", {
 	reducer: combineReducers( { editor: editorReducer } ),
@@ -42,32 +40,8 @@ class App extends React.Component {
    * @returns {void}
    */
   init() {
-    const MySidebar = () => (
-      <Fragment>
-        <PluginSidebar name="my-awesome-plugin-sidebar" title="My Awesome Plugin">
-          <Slot name="MyAwesomePluginSidebar" />
-        </PluginSidebar>
-
-        <Fragment><Sidebar /></Fragment>
-      </Fragment>
-    );
-
-    const MySidebar2 = () => (
-      <Fragment>
-        <PluginSidebar name="my-awesome-plugin-sidebar-2" title="My Awesome Plugin 2 without fills">
-          <Slot name="MyAwesomePluginSidebar2" />
-        </PluginSidebar>
-
-      </Fragment>
-    );
-
-    registerPlugin( "My-awesome-plugin", {
-      render: MySidebar
-    } );
-
-    registerPlugin( "My-awesome-plugin-2", {
-      render: MySidebar2
-    } );
+    new MyAwesomePlugin();
+    new MyNotSoAwesomePlugin();
   }
 
   /**
